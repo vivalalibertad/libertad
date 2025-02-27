@@ -1,10 +1,39 @@
 /* Configuración general */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000; /* Fondo negro */
+    background: radial-gradient(circle at top, rgba(255, 215, 0, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
     color: #FFD700; /* Texto dorado */
     margin: 0;
     padding: 0;
+    animation: waterEffect 6s infinite alternate ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación para simular el efecto de luz filtrándose */
+@keyframes waterEffect {
+    0% {
+        background: radial-gradient(circle at top, rgba(255, 215, 0, 0.3) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+    100% {
+        background: radial-gradient(circle at top, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
+    }
+}
+
+/* Efecto de rayos de luz animados */
+@keyframes rays {
+    0% { opacity: 0.4; transform: translateY(0px) rotate(0deg); }
+    100% { opacity: 0.8; transform: translateY(20px) rotate(1deg); }
+}
+
+.rays {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 200%;
+    height: 150px;
+    background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.2) 0%, rgba(0, 0, 0, 0) 80%);
+    animation: rays 6s infinite alternate ease-in-out;
 }
 
 /* Efecto dorado texturizado */
@@ -14,7 +43,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shine 5s infinite linear;
-    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Sombras doradas */
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
 }
 
 /* Animación para simular brillo */
@@ -67,6 +96,7 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 100px 20px;
+    position: relative;
 }
 
 .hero h1 {
@@ -136,3 +166,4 @@ footer a {
 footer a:hover {
     color: #FFF;
 }
+

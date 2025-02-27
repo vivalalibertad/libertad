@@ -1,0 +1,118 @@
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #FFD700; /* Texto dorado */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111; /* Un negro más oscuro para el header */
+    padding: 15px 20px;
+    border-bottom: 2px solid #FFD700; /* Línea dorada decorativa */
+}
+
+.logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+}
+
+/* Sección principal (Hero) */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #000;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Redes Sociales */
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    color: #FFD700;
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+}
+
+.social-links a:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Pie de página */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #FFD700;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFF;
+}

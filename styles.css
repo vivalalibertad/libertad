@@ -7,18 +7,35 @@ body {
     padding: 0;
 }
 
+/* Efecto dorado texturizado */
+.gold-text {
+    background: linear-gradient(45deg, #B8860B, #FFD700, #DAA520, #B8860B);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s infinite linear;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5); /* Sombras doradas */
+}
+
+/* Animación para simular brillo */
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* Estilos del encabezado */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #111; /* Un negro más oscuro para el header */
+    background-color: #111;
     padding: 15px 20px;
-    border-bottom: 2px solid #FFD700; /* Línea dorada decorativa */
+    border-bottom: 3px solid #FFD700;
 }
 
 .logo img {
-    width: 120px; /* Ajusta el tamaño del logo */
+    width: 120px;
 }
 
 /* Navegación */
@@ -34,9 +51,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFD700;
-    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
+    text-decoration: none;
+    color: #FFD700;
+    text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -55,27 +75,24 @@ nav ul li a:hover {
     text-transform: uppercase;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 20px;
-}
-
-/* Botón */
+/* Botón con efecto dorado */
 .btn {
     display: inline-block;
-    background-color: #FFD700;
-    color: #000;
+    background: linear-gradient(45deg, #B8860B, #FFD700, #DAA520);
     padding: 12px 25px;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+    color: #000;
     border-radius: 5px;
+    border: 2px solid #DAA520;
+    box-shadow: 3px 3px 8px rgba(255, 215, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
-    background-color: #fff;
-    color: #000;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 12px rgba(255, 215, 0, 0.8);
 }
 
 /* Secciones */
@@ -89,10 +106,13 @@ section {
     display: inline-block;
     margin: 10px;
     padding: 10px 15px;
-    color: #FFD700;
     text-decoration: none;
-    border: 1px solid #FFD700;
+    font-weight: bold;
+    color: #FFD700;
+    border: 2px solid #FFD700;
     border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s;
 }
 
 .social-links a:hover {
@@ -105,7 +125,7 @@ footer {
     background-color: #111;
     text-align: center;
     padding: 20px;
-    border-top: 2px solid #FFD700;
+    border-top: 3px solid #FFD700;
 }
 
 footer a {
